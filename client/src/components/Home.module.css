@@ -1,0 +1,276 @@
+@import url('https://api.fontshare.com/v2/css?f[]=supreme@800,400,200,300,500&display=swap" rel="stylesheet');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet"');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+.landing{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(rgba(83, 83, 83, 0.5), rgba(83, 83, 83, 0.5)), url(../assets/depilacion-laser-terapia-depilacion.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.landing_container{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.reserva{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+    border-bottom: 2px solid #d2f0d7;
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+
+.mas_info{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 20px; */
+}
+
+.landing_container p{
+    width: 300px;
+    color: aliceblue;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.landing_container a{
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: aliceblue;
+    align-self: center;
+    padding: 15px;
+    background-color: rgba(6, 161, 130, 0.6);
+    border-radius: 3px;
+}
+
+.landing_container a:hover{
+    background-color: antiquewhite;
+    color:  rgba(3, 87, 48, 0.6);
+}
+
+.first_info{
+    position: relative;
+    object-fit: fill;
+    margin-bottom: 200px;
+}
+
+.first_container{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first_container img{
+    width: 400px;
+}
+
+.textos_first{
+    width: 400px;
+    margin: 0 50px;
+}
+
+.textos_first h1{
+    font-family: 'Satoshi';
+    font-weight: 400;
+    margin: 10px 20px;
+    text-align: end;
+
+}
+
+.textos_first p{
+    text-align: end;
+    font-family: 'Satoshi';
+    color: rgb(69, 70, 71);
+}
+
+.slide_section{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 150px 50px;
+    margin-bottom: 50px;
+}
+
+.slide{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate;
+}
+
+.slide li{
+    width: 100%;
+    list-style: none;
+}
+
+.slide img{
+    width: 100%;
+    height: 90vh;
+}
+
+@keyframes cambio{
+    0%{ margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+.icon_section{
+    margin-bottom: 70px;
+    background-color: rgba(3, 87, 48, 0.6);
+    height: 250px;
+    padding-top: 25px;
+}
+
+.icon_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.iconcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 200px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    justify-self: center;
+    color: antiquewhite;
+}
+
+.iconcard img{
+    padding: 30px;
+    background-color: rgb(236, 236, 205);
+    border-radius: 50%;
+}
+
+.iconcard h3{
+    margin: 15px;
+}
+
+.iconcard a{
+    max-width: 60%;
+    align-self: center;
+}
+
+
+.contacto{
+    background: #fff;
+    /* padding: 100px 30px; */
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 50px;
+}
+
+.input{
+    background: transparent;
+    border: 2px solid  rgba(3, 87, 48, 0.6);
+    border-radius: 8px;
+    color: rgba(3, 87, 48, 0.6);
+    outline: none;
+    padding: 20px 10px;
+}
+
+.input::placeholder{
+    color: rgba(3, 87, 48, 0.6);
+    font-family: 'Poppins';
+}
+
+input[type="text"],
+input[type="email"]{
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.form textarea{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="submit"]{
+    width: 120px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    color: #fff;
+    background:rgba(3, 87, 48, 0.6);
+}
+
+.contacto h2{
+    margin-left: 50px;
+    color: rgba(3, 87, 48, 0.6);
+    font-family: 'Satoshi';
+    font-weight: 400;
+}
+
+footer{
+    background-color: rgba(4, 124, 100, 0.6);
+    height: 250px;
+    margin-top: 150px;
+}
+
+.footer_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social{
+    border-right: 2px solid #fff;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.textos_footer{
+    padding-left: 40px;
+    color: #fff;
+}

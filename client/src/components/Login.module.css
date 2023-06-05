@@ -1,0 +1,66 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login_container{
+    background-color: rgb(127, 179, 146);
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.signup{
+    padding: 15px;
+    width: 20%;
+    height: 50%;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+
+.signup h1{
+    text-align: center;
+}
+
+.signup input{
+    width: 90%;
+}
+
+.signup button{
+    margin-top: 20px;
+    width: 90%;
+    height: 30px;
+}
+
+.google_container{
+    border-top: 1px solid white;
+    margin-top: 30px;
+}
+
+.google_container{
+    display: flex;
+    justify-content: center;
+}
+
+.google_btn{
+    height: 35px;
+    background-color: rgb(120, 120, 228);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.passwordagain{
+    margin-top: 20px;
+}
+
+
+
+ */

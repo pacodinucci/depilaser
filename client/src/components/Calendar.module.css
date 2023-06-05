@@ -1,0 +1,336 @@
+
+*::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bg-calendar: #517A66;
+    --color-cell: #f8f8f8;
+    --color-cell-disabled: #48574b;
+}
+
+.turnero{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #87CCA9;
+    height: 85vh;
+}
+
+.fechas{
+    /* min-height: 80vh; */
+    width: 40%;
+    height: 80%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.fechas h2{
+    /* align-self: flex-start; */
+    /* margin-left: 10px; */
+    font-size: 20px;
+    color: #515451;
+}
+
+.calendar{
+    padding: 25px 10px;
+    background-color: var(--color-bg-calendar);
+    border-radius: 3px;
+    width: 100%;
+    /* max-width: 300px; */
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.calendar-header{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calendar-header img{
+    height: 30px;
+}
+
+.calendar .control{
+    color: #fff;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.grid-header, .grid-body{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-header{
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.grid-header span{
+    margin: 0 auto;
+}
+
+.grid-body{
+    grid-auto-rows: 40px;
+    color: var(--color-cell);
+}
+
+.grid-cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.grid-cell--gd{
+    cursor: pointer;
+}
+
+.grid-cell--selected{
+    color: var(--color-bg-calendar);
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
+}
+
+.grid-cell--disabled{
+    color: var(--color-cell-disabled);
+    cursor: not-allowed;
+}
+
+.turnos{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    width: 40%;
+    border-radius: 6px;
+    padding: 0 15px;
+    background-color: #fff;
+    margin-top: 30px;
+    height: 80%;
+}
+
+.turnos h2{
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #515451;
+}
+
+.turnos-dia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+    margin-top: 30px;
+}
+
+.turnos-dia span{
+    align-self: center;
+    background-color: var(--color-bg-calendar);
+    color: #ffff;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 60%;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.lista-turnos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+    /* border: 2px solid blue; */
+    width: 70%;
+}
+
+.lista-turnos p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 45%;
+    color: #C21800;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.lista-turnos img{
+    width: 80px;
+    height: 80px;
+}
+
+
+.horario-turno {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 15px 0;
+}
+
+.turno-datos{
+    padding: 10px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #71b36f;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-reserva{
+    border: 2px solid gray;
+    color: gray;
+    padding: 15px;
+    font-family: sans-serif;
+    border-radius: 4px;
+}
+
+.horario-turno:hover .btn-reserva{
+    border: 2px solid #71b36f;
+    color: #71b36f;
+    font-weight: bold;
+    box-shadow: 3px 4px 5px 0px rgba(26, 42, 19, 0.6);
+    cursor: pointer;
+}
+
+.btn-reserva:hover{
+    border: 2px solid #71b36f;
+    background-color: #71b36f;
+}
+
+.btn-reserva:hover .reservar{
+    color: #fff;
+}
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modalContent {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 8px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modalContent .modalTitle{
+    width: 100%;
+    height: 15%;
+    background-color: var(--color-bg-calendar);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .fechayhora{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    color: #515451;
+  }
+
+  .modalButtons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 15px;
+  }
+
+  .aceptarbtn{
+    width: 45%;
+    background: linear-gradient(220.55deg, #2ddd6ebb 0%, #0eba50c8 100%);
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .cancelarbtn{
+    width: 30%;
+    background: linear-gradient(220.55deg, #ff0000aa 0%, #c40505b3 100%);
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  /* .confirmarbtn{
+    width: 45%;
+    text-align: center;
+    background: linear-gradient(220.55deg, #2ddd6ebb 0%, #0eba50c8 100%);
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+    height: 15%;
+    flex-direction: column;
+  } */
+
+
+
+
+
+
+
+

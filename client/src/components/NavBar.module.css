@@ -1,0 +1,63 @@
+@import url('https://api.fontshare.com/v2/css?f[]=supreme@800,400,200,300,500&display=swap" rel="stylesheet');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet"');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head_container{
+    position: relative;
+    width: 90%;
+    height: 15vh;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.head_container img{
+    background-color: transparent;
+    transform: scale(1.4);
+    grid-column: 2;
+    margin: 0 auto;
+}
+
+.login_container{
+    grid-column: 3;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.login_container a{
+    margin: 25px;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(63, 97, 74);
+    letter-spacing: 1.2px;
+    
+}
+
+.login_container a:hover{
+    color:  rgb(88, 199, 125); 
+}
+
+.user_data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+}
+
+
+
+
+
